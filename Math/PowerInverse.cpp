@@ -9,3 +9,5 @@ int power( int a, int b )
 
     return ret;
 }
+
+int inverse( int b ) { return power( b, MOD - 2 ); }
