@@ -1,0 +1,22 @@
+1. You have 7 cookies to give to 4 children, How many ways can U do this? => C( stars + bars, bars )
+
+   bars = 4 - 1 = 3, stars = 7
+
+U can also write it in the form [ x1 + x2 + x3 + x4 = 7 ]
+
+2. How many ways are there to distribute 7 cookies to 4 children so that each child gets at least one cookie?
+
+   Since 4 stars are now fixed ( can't change them ) => new stars = 7 - 4 = 3;
+
+   answer = C( stars + bars, bars ) = C( 3 + 3, 3 ) = C( 6, 3 )
+
+3. How many sets of size 5 can be made using the 10 numeric digits 0 - 9? => C(10, 5)
+4. How many multisets (elements can be rebeated) of size 5 can be made using the 10 numeric digits 0 - 9?
+
+   Can be solved using stars & bars => Stars = 5 element positions in the multiset
+				       Bars = 9 ( 9 Switches )
+   Example:
+   
+   *||*|*||||*||* => {0, 2, 3, 7, 9}         |**||||**||*|| => {1, 1, 5, 5, 7}
+
+5. 
