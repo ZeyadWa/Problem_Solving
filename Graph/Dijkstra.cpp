@@ -1,5 +1,4 @@
 const int N = 1e5 + 5;
-
 struct node
 {
     int index, cost;

@@ -1,6 +1,8 @@
 #include<ext/pb_ds/assoc_container.hpp>
 #include<ext/pb_ds/tree_policy.hpp>
 using namespace __gnu_pbds;
-typedef tree< int, null_type, less<>, rb_tree_tag, tree_order_statistics_node_update> Ordered_Set;
-typedef tree< int, null_type, less_equal<>, rb_tree_tag, tree_order_statistics_node_update> Ordered_Multiset;
+template <class T>
+using Ordered_Set = tree< T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+template <class T>
+using Ordered_Multiset = tree< T, null_type, less_equal<T>, rb_tree_tag, tree_order_statistics_node_update>;
 // *find_by_order, order_of_key
