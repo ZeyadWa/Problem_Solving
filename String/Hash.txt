@@ -1,0 +1,3 @@
+Hash with respect of order => ( AlphaCount * ( base ^ index ) )
+
+Hash Non order => ( Digit ^ base )
