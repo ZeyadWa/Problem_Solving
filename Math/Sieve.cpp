@@ -42,12 +42,12 @@ void Sieve()
 }
 
 vector<int>ans;
-    while( n != 1 )
-    {
-        int x = primeDivisors[n];
-        n /= x;
-        ans.push_back(x);
-    }
+while( n != 1 )
+{
+    int x = primeDivisors[n];
+    n /= x;
+    ans.push_back(x);
+}
 
 
 *** Linear Sieve *** O(n)
