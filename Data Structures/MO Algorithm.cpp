@@ -1,5 +1,4 @@
-vector<long long> queryAns;
-vector<long long> arr;
+int arr[N], queryAns[N];
 int n, q, sq; // sq -> sqrt(n)
 
 struct q_data
@@ -29,18 +28,17 @@ long long ans = 0; // Current query answer, Neutral value as initial;
 
 void add( int idx )       // Add element in range
 {
-    
+
 }
 
 void remove( int idx )    // Remove element from range
 {
-    
+
 }
 
 void MO()   // Just change in the add & remove functions
 {
     sq = sqrt(n);
-    queryAns.resize(q);
 
     // send them 1-indexed
     for( int i = 0; i < q; ++i )
@@ -50,9 +48,7 @@ void MO()   // Just change in the add & remove functions
     }
     sort(queries.begin(), queries.end());
 
-    int l = queries[0].l, r = queries[0].l;
-    add(l);
-
+    int l = 1, r = 0;
     for( int i = 0; i < q; ++i )
     {
         while( queries[i].l > l ) remove(l++);
@@ -63,3 +59,16 @@ void MO()   // Just change in the add & remove functions
         queryAns[queries[i].id] = ans;
     }
 }
+
+void display()
+{
+    for( int i = 0; i < q; i++ )
+        cout << queryAns[i] << endl;
+}
+
+/*
+    Avoid TLE?
+    1. Don't Define int long long ( Please don't do that )
+    2. Use arrays only!
+    3. Change Compiler
+*/
