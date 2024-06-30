@@ -1,7 +1,9 @@
-vector<vector<ll>> dist(n + 1, vector<ll>(n + 1, oo));
+vector<vector<ll>> dist(n + 1, vector<int>(n + 1, oo));
 
-for(int i = 0; i < m; ++i) {
+for(int i = 0; i < m; ++i) 
+{
     ll u, v, c; cin >> u >> v >> c;
+    
     dist[u][u] = 0, dist[v][v] = 0;
     dist[u][v] = min(dist[u][v], c);
     dist[v][u] = min(dist[v][u], c); // if undirected
