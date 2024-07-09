@@ -31,8 +31,9 @@ void File()
 int dx[] = {1, -1, 0, 0};
 int dy[] = {0, 0, 1, -1};
 const int oo = 1e18 + 5;
-const int mod = 1e9 + 7;
-//===========================
+const int MOD = 1e9 + 7;
+const int N = 1e6 + 6;
+//===========================\\
 
 void solve()
 {
